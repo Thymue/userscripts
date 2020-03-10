@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu!userpage sort
 // @namespace    http://thymo.ga/
-// @version      1.12
+// @version      2020.311.0
 // @description  Automatically sorts people's userpages how you want them to be.
 // @author       Thymue
 // @match        https://osu.ppy.sh/*
@@ -19,6 +19,7 @@
     1.1 - opening user profile of the same person twice in a row now doesn't break sorting
     1.11 - added account_standing to sorting so it won't be first anymore (if you don't want it to)
     1.12 - moved to github
+    2020.311.0 - changed to different version format because I like this more
     */
 
     /*
