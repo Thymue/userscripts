@@ -5,8 +5,8 @@
 // @description  Automatically sorts people's userpages how you want them to be.
 // @author       Thymue
 // @match        https://osu.ppy.sh/*
-// @updateURL    https://github.com/Thymue/userscripts/raw/master/UserPageSort.user.js
-// @downloadURL  https://github.com/Thymue/userscripts/raw/master/UserPageSort.user.js
+// @updateURL    https://github.com/Thymue/userscripts/raw/master/userpagesort.user.js
+// @downloadURL  https://github.com/Thymue/userscripts/raw/master/userpagesort.user.js
 // @supportURL   https://osu.ppy.sh/users/7820468
 // @grant        none
 // ==/UserScript==
