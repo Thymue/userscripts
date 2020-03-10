@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         osu!userpage sort
 // @namespace    http://thymo.ga/
-// @version      2020.311.0
+// @version      2020.311.1
 // @description  Automatically sorts people's userpages how you want them to be.
 // @author       Thymue
-// @match        https://osu.ppy.sh/*
+// @include      https://osu.ppy.sh/*
+// @include      http://osu.ppy.sh/*
 // @updateURL    https://github.com/Thymue/userscripts/raw/master/userpagesort.user.js
 // @downloadURL  https://github.com/Thymue/userscripts/raw/master/userpagesort.user.js
 // @supportURL   https://osu.ppy.sh/users/7820468
@@ -20,6 +21,7 @@
     1.11 - added account_standing to sorting so it won't be first anymore (if you don't want it to)
     1.12 - moved to github
     2020.311.0 - changed to different version format because I like this more
+    2020.311.1 - changed @match to @include and added http include just to make sure
     */
 
     /*
