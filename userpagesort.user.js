@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu!userpage sort
 // @namespace    http://thymo.ga/
-// @version      2020.311.1
+// @version      2020.726.0
 // @description  Automatically sorts people's userpages how you want them to be.
 // @author       Thymue
 // @include      https://osu.ppy.sh/*
