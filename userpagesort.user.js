@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu!userpage sort
 // @namespace    http://thymo.ga/
-// @version      2020.726.0
+// @version      2020.819.0
 // @description  Automatically sorts people's userpages how you want them to be.
 // @author       Thymue
 // @include      https://osu.ppy.sh/*
@@ -18,6 +18,8 @@
 
 /* globals jQuery, $, waitForKeyElements */
 
+//TODO: fix a problem where if you access user profile e.g. from beatmapset page and use back and forward buttons it duplicates oups buttons e.g. the one on the bottom of the page
+
 /*
 1.0 - it works pog
 1.1 - opening user profile of the same person twice in a row now doesn't break sorting
@@ -26,12 +28,13 @@
 2020.311.0 - changed to different version format because I like this more
 2020.311.1 - changed @match to @include and added http include just to make sure
 2020.726.0 - complete rewrite using jQuery, waitForKeyElements and added configuration and stuff
+2020.819.0 - script wasn't working because of some name changes now it should work again
 */
 
 var order = (GM_getValue("oupsOrder") == undefined) ? "" : GM_getValue("oupsOrder").split("\n");
 order.splice(order.length - 1, 1); // removes last element from array because it was just empty
 
-waitForKeyElements(".osu-layout__section.osu-layout__section--users-extra", sortPage);
+waitForKeyElements(".user-profile-pages.ui-sortable", sortPage);
 
 function sortPage() {
     addButtons();
@@ -94,11 +97,11 @@ function resetConfiguration() {
 
 function sort() {
     if(!order == "") {
-        var pages = $(".osu-layout__row.ui-sortable")[0].children;
+        var pages = $(".user-profile-pages.ui-sortable")[0].children;
         order.forEach((orderItem) => {
             for(let i = 0; i < pages.length; i++) {
                 if(pages[i].getAttribute("data-page-id") == orderItem) {
-                    $(".osu-layout__row.ui-sortable").append(pages[i]);
+                    $(".user-profile-pages.ui-sortable").append(pages[i]);
                     break;
                 }
             }
