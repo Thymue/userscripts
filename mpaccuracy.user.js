@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         osu!mp accuracy
 // @namespace    http://thymo.ga/userscripts/
-// @version      2020.831.0
-// @description  Switches to accuracy metric instead of score on multiplayer history pages that use Team VS or Tag Team VS.
+// @version      2020.831.1
+// @description  Switches to accuracy metric instead of score on multiplayer history pages if winning condition is set to accuracy
 // @author       Thymue
 // @include      https://osu.ppy.sh/community/matches/*
 // @include      http://osu.ppy.sh/community/matches/*
@@ -16,12 +16,19 @@
 
 /*
 2020.831.0 - first working release
+2020.831.1 - now checks if winning condition is set to accuracy
 */
 
 setInterval(update, 1000); // updates everything every second. if your pc isn't from 1997 and the match you opened doesn't have 31501 maps played it shouldn't cause any problem.
 
 function update() {
     for(let gameEvent of $(".mp-history-events__game")) {
+        let skip = true;
+        for(let stat of $(gameEvent).find(".mp-history-game__stat")) {
+            if(stat.innerText == "Highest Accuracy") skip = false;
+        }
+        if(skip) continue;
+
         let blueAccuracy = 0, redAccuracy = 0;
         for(let playerScore of $(gameEvent).find(".mp-history-game__player-score.mp-history-player-score")) {
             if($(playerScore).find(".mp-history-player-score__shapes").attr("style").indexOf("blue") >= 0)
