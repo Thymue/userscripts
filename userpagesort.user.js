@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         osu!userpage sort
 // @namespace    http://thymo.ga/
-// @version      2020.819.0
+// @version      2020.1021.0
 // @description  Automatically sorts people's userpages how you want them to be.
 // @author       Thymue
 // @include      https://osu.ppy.sh/*
@@ -29,10 +29,11 @@
 2020.311.1 - changed @match to @include and added http include just to make sure
 2020.726.0 - complete rewrite using jQuery, waitForKeyElements and added configuration and stuff
 2020.819.0 - script wasn't working because of some name changes now it should work again
+2020.1021.0 - fix a bug I didn't notice
 */
 
 var order = (GM_getValue("oupsOrder") == undefined) ? "" : GM_getValue("oupsOrder").split("\n");
-order.splice(order.length - 1, 1); // removes last element from array because it was just empty
+if(order != "") order.splice(order.length - 1, 1); // removes last element from array because it was just empty
 
 waitForKeyElements(".user-profile-pages.ui-sortable", sortPage);
 
