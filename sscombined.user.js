@@ -24,8 +24,8 @@
       if($("#sshit-sscombined")[0] != undefined) $("#sshit-sscombined")[0].remove();
       if($("#sshit-scombined")[0] != undefined) $("#sshit-scombined")[0].remove();
       
-      sscombined = $(`<div class="profile-rank-count__item" id="sshit-sscombined"><div>SSC</div>${(ss + ssh).toLocaleString()}</div>`);
-      scombined = $(`<div class="profile-rank-count__item" id="sshit-scombined"><div>SC</div>${(s + sh).toLocaleString()}</div>`);
+      sscombined = $(`<div class="profile-rank-count__item" id="sshit-sscombined"><div class="score-rank score-rank--X score-rank--profile-page" style="filter: grayscale(1);"></div>${(ss + ssh).toLocaleString()}</div>`);
+      scombined = $(`<div class="profile-rank-count__item" id="sshit-scombined"><div class="score-rank score-rank--S score-rank--profile-page" style="filter: grayscale(1);"></div>${(s + sh).toLocaleString()}</div>`);
       //scombined = $(`<div class="profile-rank-count__item" id="sshit-scombined"><div class="score-rank score-rank--S score-rank--profile-page"></div>${(s + sh).toLocaleString()}</div>`);
       
       $(".profile-rank-count")[1].appendChild(sscombined[0]);
