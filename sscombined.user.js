@@ -3,7 +3,7 @@
 // @namespace    http://thymo.ga/
 // @version      2021.702.0
 // @description  Adds up s's and ss's
-// @author       Thymue
+// @author       thymue
 // @include      https://osu.ppy.sh/*
 // @updateURL    https://github.com/Thymue/userscripts/raw/master/sscombined.user.js
 // @downloadURL  https://github.com/Thymue/userscripts/raw/master/sscombined.user.js
