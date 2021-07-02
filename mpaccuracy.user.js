@@ -3,7 +3,7 @@
 // @namespace    http://thymo.ga/userscripts/
 // @version      2020.831.1
 // @description  Switches to accuracy metric instead of score on multiplayer history pages if winning condition is set to accuracy
-// @author       Thymue
+// @author       thymue
 // @include      https://osu.ppy.sh/community/matches/*
 // @include      http://osu.ppy.sh/community/matches/*
 // @updateURL    https://github.com/Thymue/userscripts/raw/master/mpaccuracy.user.js
