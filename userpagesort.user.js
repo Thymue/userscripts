@@ -3,7 +3,7 @@
 // @namespace    http://thymo.ga/
 // @version      2020.1021.0
 // @description  Automatically sorts people's userpages how you want them to be.
-// @author       Thymue
+// @author       thymue
 // @include      https://osu.ppy.sh/*
 // @include      http://osu.ppy.sh/*
 // @updateURL    https://github.com/Thymue/userscripts/raw/master/userpagesort.user.js
